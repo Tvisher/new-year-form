@@ -58,6 +58,9 @@ form.addEventListener('submit', e => {
     }
     const formData = new FormData(form);
     for (let [name, value] of formData) {
+        if (name == 'some-input') {
+            continue;
+        }
         const field = document.querySelector(`[name="${name}"]`);
         if (value.trim().length < 1) {
             field.closest('.fields-item').classList.add('error');
