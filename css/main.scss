@@ -1,0 +1,472 @@
+@import "../fonts/fonts.scss";
+
+body {
+  color: #fff;
+  font-family: "Gogh";
+  line-height: 100%;
+  font-size: 18px;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.new-year-form {
+  max-width: 1240px;
+  margin: 45px auto;
+  padding: 0px 20px;
+}
+
+.new-year-form__head {
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  background: #b70023;
+  padding: 40px 32px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.head__title {
+  color: #fff;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 113%; /* 113.462% */
+  white-space: nowrap;
+}
+
+.head__image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 55%;
+
+  img {
+    height: 100%;
+    width: auto;
+    object-position: right center;
+  }
+}
+
+.new-year-form__body {
+  display: flex;
+  padding: 40px 40px 60px 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;
+  border-radius: 16px;
+  background: #f7f4f4;
+}
+
+.new-year-form__fields {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='84' height='35' viewBox='0 0 84 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 33C15.0064 28.9943 28.9453 22.8772 35.8352 10.448C36.9096 8.50976 38.7689 3.49674 35.6393 2.30595C32.8928 1.26093 27.8778 3.04066 26.3966 5.40766C22.5416 11.5683 19.5902 20.6086 29.0094 23.4041C39.2635 26.4473 52.9616 23.989 63.1385 21.3686C68.0747 20.0975 73.916 18.1815 78.2925 15.5528C81.1977 13.8078 78.362 14.3897 76.2023 14.3897C73.1307 14.3897 66.0381 14.3897 72.8384 14.3897C75.6016 14.3897 78.6222 13.9596 81.1012 13.2589C83.7516 12.5098 79.7352 15.5947 79.3376 16.1667C78.0843 17.9702 76.6595 20.8865 76.6595 23.1133' stroke='%23B70023' stroke-width='3' stroke-linecap='round'/%3e%3c/svg%3e ");
+  background-repeat: no-repeat;
+  background-position: center 65%;
+}
+
+.fields__title {
+  color: #b70023;
+  font-family: Gogh;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 30px;
+}
+
+.fields__group {
+  width: calc(50% - 80px);
+}
+
+.fields-item {
+  display: block;
+}
+.fields__input,
+.from-message {
+  outline: none;
+  width: 100%;
+  display: block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background-color: transparent;
+  max-width: 100%;
+  margin: 0;
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.postcard-title {
+  color: #b70023;
+  font-family: Gogh;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 113%;
+  margin-bottom: 20px;
+}
+.message-item {
+  width: 100%;
+}
+.from-message {
+  min-height: 95px;
+  resize: vertical;
+  width: 100%;
+}
+
+.err-mes {
+  opacity: 0;
+  display: block;
+  margin-top: 3px;
+  margin-bottom: 7px;
+  color: #b70023;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.fields-item.error {
+  .err-mes {
+    opacity: 1;
+  }
+  .fields__input,
+  .from-message {
+    border-color: #b70023;
+    color: #b70023;
+    &::placeholder {
+      color: #b70023;
+    }
+  }
+}
+
+.new-year-form__postcard {
+  width: 100%;
+}
+
+.postcard__wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.postcard__slider {
+  height: 100%;
+  overflow: visible;
+}
+
+.postcard__slider-container {
+  width: 84%;
+  margin: 0;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: #b70023;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  img {
+    border-radius: 19px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  &::after {
+    cursor: pointer;
+    display: block;
+    content: "";
+    position: absolute;
+    right: 80px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='0.500244' y='0.500122' width='29' height='29' rx='14.5' fill='%234FB37B'/%3e%3crect x='0.500244' y='0.500122' width='29' height='29' rx='14.5' stroke='%23F7F4F4'/%3e%3cpath d='M8.00021 14.0001L13.0005 19.5001L22.0005 10.5001' stroke='white' stroke-width='2' stroke-linecap='round'/%3e%3c/svg%3e ");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.postcard__selection {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.postcard__item {
+  position: relative;
+  .postcard-type {
+    cursor: pointer;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    &:checked + .item__image {
+      border: 2px solid rgba(0, 0, 0, 0.25);
+      &::after {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='0.500244' y='0.500122' width='29' height='29' rx='14.5' fill='%234FB37B'/%3e%3crect x='0.500244' y='0.500122' width='29' height='29' rx='14.5' stroke='%23F7F4F4'/%3e%3cpath d='M8.00021 14.0001L13.0005 19.5001L22.0005 10.5001' stroke='white' stroke-width='2' stroke-linecap='round'/%3e%3c/svg%3e ");
+      }
+    }
+  }
+  .item__image {
+    &::after {
+      pointer-events: none;
+      box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      content: "";
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='30' height='31' viewBox='0 0 30 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='3.05176e-05' y='0.361145' width='30' height='30' rx='15' fill='%23F7F4F4'/%3e%3cpath d='M8 14.3611L13.0003 19.8611L22.0003 10.8611' stroke='white' stroke-width='2' stroke-linecap='round'/%3e%3c/svg%3e ");
+    }
+    padding: 8px;
+    border-radius: 16px;
+    border: 2px solid transparent;
+    img {
+      width: 141px;
+      height: 94px;
+      border-radius: 8px;
+    }
+  }
+}
+
+.red-btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 10px 36px;
+  border-radius: 8px;
+  background: #b70023;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.04);
+}
+
+hr {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+@media (max-width: 1240px) {
+  .postcard__selection {
+    gap: 10px;
+  }
+  .postcard__slider-container {
+    height: 40vw;
+    width: calc(100% - 161px);
+  }
+  .postcard__wrapper {
+    align-items: center;
+  }
+  .head__title {
+    font-size: 36px;
+  }
+  .new-year-form__head {
+    padding: 30px;
+  }
+  .head__image {
+    width: 40%;
+  }
+  .fields__group {
+    width: calc(50% - 50px);
+  }
+}
+
+@media (max-width: 992px) {
+  .fields__group {
+    width: calc(50% - 10px);
+  }
+  .new-year-form__fields {
+    background: none;
+  }
+  .postcard__slider-container {
+    display: none;
+  }
+  .postcard__selection {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .postcard__item {
+    height: 28vw;
+    width: calc(50% - 10px);
+    .item__image {
+      width: 100%;
+      height: 100%;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .head__title {
+    font-size: clamp(1px, 9vw, 55px);
+  }
+  .fields__group {
+    width: 100%;
+  }
+  .new-year-form__fields {
+    flex-direction: column;
+  }
+  .new-year-form__body {
+    padding: 20px;
+  }
+  .new-year-form {
+    padding: 0px 10px;
+  }
+  .head__image {
+    width: 100%;
+    top: inherit;
+    bottom: 0;
+    height: 63vw;
+    display: flex;
+    picture {
+      margin-top: 10px;
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-position: bottom;
+    }
+  }
+  .new-year-form__head {
+    padding-bottom: 65vw;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .fields__title,
+  .postcard-title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  .red-btn {
+    font-size: 18px;
+  }
+  .fields__input,
+  .from-message {
+    font-size: 16px;
+  }
+  .postcard__item {
+    width: 100%;
+    height: 55vw;
+  }
+  .new-year-form__body {
+    gap: 30px;
+  }
+}
+
+.form-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    .form-modal__content {
+      transform: translateY(0);
+    }
+  }
+}
+
+.form-modal__content {
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(100px);
+  position: relative;
+  max-width: 557px;
+  width: 100%;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 16px;
+  color: #b70023;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 35px;
+}
+
+.form-modal__title {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.form-modal__descr {
+  color: #000;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.form-modal__close {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-modal {
+    align-items: inherit;
+    padding: 0;
+  }
+  .form-modal__content {
+    height: fit-content;
+    margin-top: auto;
+  }
+}

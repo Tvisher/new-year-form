@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Новым 2024 годом!</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+    <link rel="icon" sizes="32x32" href="./favicons/favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="16x16" href="./favicons/favicon-16x16.png" type="image/png">
+    <link rel="Shortcut Icon" type="image/x-icon" href="./favicons/favicon.ico">
+
+    <meta name="description"
+        content="Разделите радость праздника с коллегами, отправив искренние пожелания и красочную открытку">
+    <meta property="og:title" content="С Новым 2024 годом!">
+    <meta property="og:description"
+        content="Разделите радость праздника с коллегами, отправив искренние пожелания и красочную открытку">
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="./img/LAB-Industries.png">
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="./img/LAB-Industries.png" />
+
+
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body>
+    <div class="new-year-form">
+        <div class="new-year-form__head">
+            <div class="head__title">
+                С наступающим <br> Новым годом <br> и Рождеством!
+            </div>
+            <div class="head__image">
+                <picture>
+                    <source srcset="./img/head-mobile.png" media="(max-width: 768px)">
+                    <img src="./img/head.png" alt="">
+                </picture>
+            </div>
+        </div>
+        <form id="form" class="new-year-form__body">
+            <div class="new-year-form__fields">
+                <div class="fields__group">
+                    <div class="fields__title">От кого</div>
+                    <label class="fields-item">
+                        <input type="text" name="name-from" class="fields__input" placeholder="Имя">
+                        <span class="err-mes">Необходимо заполнить поле</span>
+                    </label>
+                    <label class="fields-item">
+                        <input type="text" name="email-from" class="fields__input" placeholder="E-mail">
+                        <span class="err-mes">Необходимо заполнить поле</span>
+                    </label>
+                    <label class="fields-item">
+                        <input type="text" name="job-title-from" class="fields__input"
+                            placeholder="Должность отправителя">
+                        <span class="err-mes">Необходимо заполнить поле</span>
+                    </label>
+                </div>
+
+
+                <div class="fields__group">
+                    <div class="fields__title">Кому</div>
+                    <label class="fields-item">
+                        <input type="text" name="name-to" class="fields__input" placeholder="Имя">
+                        <span class="err-mes">Необходимо заполнить поле</span>
+                    </label>
+                    <label class="fields-item">
+                        <input type="text" name="email-to" class="fields__input" placeholder="E-mail">
+                        <span class="err-mes">Необходимо заполнить поле</span>
+                    </label>
+                    <label class="fields-item">
+                        <input type="text" name="job-title-to" class="fields__input" placeholder="Должность получателя">
+                        <span class="err-mes">Необходимо заполнить поле</span>
+                    </label>
+                </div>
+
+            </div>
+            <div class="message-item fields-item">
+                <textarea name="from-message" class="from-message" placeholder="Введите текст поздравления"></textarea>
+                <span class="err-mes">Необходимо заполнить поле</span>
+            </div>
+            <div class="new-year-form__postcard">
+                <div class="postcard-title">Выберите открытку</div>
+                <div class="postcard__wrapper">
+                    <div class="postcard__slider-container">
+                        <div class="postcard__slider swiper">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" data-postcard-type="type-1">
+                                    <img src="./img/postcard-large-01.png" alt="">
+                                </div>
+                                <div class="swiper-slide" data-postcard-type="type-2">
+                                    <img src="./img/postcard-large-02.png" alt="">
+                                </div>
+                                <div class="swiper-slide" data-postcard-type="type-3">
+                                    <img src="./img/postcard-large-03.png" alt="">
+                                </div>
+                                <div class="swiper-slide" data-postcard-type="type-4">
+                                    <img src="./img/postcard-large-04.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="postcard__selection">
+                        <div class="postcard__item">
+                            <input type="radio" name="postcard-type" class="postcard-type" checked value="type-1">
+                            <div class="item__image">
+                                <img src="./img/postcard-large-01.png" alt="">
+                            </div>
+                        </div>
+                        <div class="postcard__item">
+                            <input type="radio" name="postcard-type" class="postcard-type" value="type-2">
+                            <div class="item__image">
+                                <img src="./img/postcard-large-02.png" alt="">
+                            </div>
+                        </div>
+                        <div class="postcard__item">
+                            <input type="radio" name="postcard-type" class="postcard-type" value="type-3">
+                            <div class="item__image">
+                                <img src="./img/postcard-large-03.png" alt="">
+                            </div>
+                        </div>
+                        <div class="postcard__item">
+                            <input type="radio" name="postcard-type" class="postcard-type" value="type-4">
+                            <div class="item__image">
+                                <img src="./img/postcard-large-04.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <button type="submit" class="red-btn submit-btn">Поздравить коллегу!</button>
+        </form>
+        <div class="form-modal">
+            <div class="form-modal__content">
+                <div class="form-modal__close" data-modal-close><svg width="15" height="15" viewBox="0 0 15 15"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1.00012L14 14.0001" stroke="black" stroke-width="2" stroke-linecap="round" />
+                        <path d="M14 1.00012L1 14.0001" stroke="black" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="form-modal__title">Поздравление отправлено!</div>
+                <div class="form-modal__ico">
+                    <svg width="135" height="53" viewBox="0 0 135 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M1.75 25.0001C5.56031 34.5259 7.55582 42.6906 8.16869 50.3585C8.21696 50.9624 8.76952 51.3959 9.36008 51.261C17.3129 49.4445 35.4848 43.4064 41.1259 41.244C41.5077 41.0976 41.75 40.7332 41.75 40.3243C41.75 32.8765 41.75 20.2643 41.75 14.1499C41.75 13.7537 41.5175 13.3975 41.155 13.2376C35.4423 10.7169 23.68 5.52187 16.5945 2.37532C16.1166 2.16307 15.5613 2.35225 15.3019 2.80633C12.421 7.84926 6.06445 16.6959 2.50956 21.4822C2.12322 22.0024 2.32397 22.7461 2.91952 23.0013L40.25 39.0001M10.75 46.5001C19.0833 40.6668 37.25 25.6001 43.25 12.0001"
+                            stroke="#B70023" stroke-width="3" stroke-linecap="round" />
+                        <path
+                            d="M53.25 42.2501C66.2564 38.2444 80.1953 32.1273 87.0852 19.6981C88.1596 17.7599 90.0189 12.7469 86.8893 11.5561C84.1428 10.5111 79.1278 12.2908 77.6466 14.6578C73.7916 20.8184 70.8402 29.8587 80.2594 32.6542C90.5135 35.6974 104.212 33.2391 114.389 30.6187C119.325 29.3477 125.166 27.4317 129.542 24.803C132.448 23.058 129.612 23.6398 127.452 23.6398C124.381 23.6398 117.288 23.6398 124.088 23.6398C126.852 23.6398 129.872 23.2097 132.351 22.509C135.002 21.7599 130.985 24.8448 130.588 25.4169C129.334 27.2204 127.91 30.1367 127.91 32.3634"
+                            stroke="#B70023" stroke-width="3" stroke-linecap="round" />
+                    </svg>
+
+                </div>
+                <div class="form-modal__descr">Письмо с открыткой успешно отправлены, с наступающим Новым годом!</div>
+                <div class="form-modal__btn red-btn" data-modal-close>Закрыть</div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
